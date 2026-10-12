@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: fmdbs_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: fmdb_admin
+      POSTGRES_PASSWORD: secure_password
+      POSTGRES_DB: forensic_medicine_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

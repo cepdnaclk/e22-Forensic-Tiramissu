@@ -1,0 +1,11 @@
+CREATE INDEX IF NOT EXISTS idx_users_role_id ON users(role_id);
+CREATE INDEX IF NOT EXISTS idx_clinical_cases_patient_id ON clinical_cases(patient_id);
+CREATE INDEX IF NOT EXISTS idx_clinical_cases_cme_no ON clinical_cases(cme_no);
+CREATE INDEX IF NOT EXISTS idx_autopsy_cases_pm_no ON autopsy_cases(pm_no);
+CREATE INDEX IF NOT EXISTS idx_autopsy_cases_patient_id ON autopsy_cases(patient_id);
+CREATE INDEX IF NOT EXISTS idx_patients_nic ON patients(nic);
+CREATE INDEX IF NOT EXISTS idx_audit_log_timestamp ON audit_log(timestamp);
+CREATE INDEX IF NOT EXISTS idx_audit_log_user_id ON audit_log(user_id);
+CREATE INDEX IF NOT EXISTS idx_documents_case ON documents(case_type, case_id);
+CREATE INDEX IF NOT EXISTS idx_investigations_case_status ON investigations(case_type, case_id, status);
+CREATE INDEX IF NOT EXISTS idx_case_tags_composite ON case_tags(case_type, case_id, tag);

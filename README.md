@@ -4,124 +4,126 @@
   </a>
 </p>
 
-<h1 align="center">[Your Project Name]</h1>
+<h1 align="center">Forensic Medicine Database System (FMDBS)</h1>
 
 <p align="center">
-  <strong>[Course Code] — [Course Name] Module Project</strong><br />
-  [Department Name] | [Faculty Name] | [University Name]
-</p>
+  <strong>CO 2050 — Database System Module Project</strong><br />
+  Computer Engineering | Faculty of Engineering | University of Peradeniya</p>
 
 <p align="center">
-  <em>Designed and engineered by <strong>[Your Team Name]</strong> (Group [XX])</em>
+  <em>Designed and engineered by <strong>Tira-miss-u</strong></em>
 </p>
 
 ---
 
-## 📑 Quick Navigation
 
-- 📄 Project Report & Documentation
-- 📌 Executive Overview
-- 🛠️ Technology Stack
-- ☁️ Cloud Architecture & DevOps Pipeline
-- 🏛️ Database Architecture & Relational Design
-- 👥 Role-Based Access Control (RBAC)
-- 📋 Core Features & Workflows
-- 🚀 Quick Start & Deployment Guide
-- 🧪 Testing & Quality Assurance
-- 🔐 Pre-Seeded Test Accounts
-- 👥 Team Members
+A comprehensive, scalable, and secure system for managing forensic medicine records, including Clinical Cases, Autopsy Cases, Specimen Logs, and Dispatch Reports. Built to modernize legacy MS Access databases into a normalized, RBAC-protected web application.
 
----
+## 🚀 Tech Stack
 
-## 📄 Project Report & Documentation
+- **Frontend**: Vanilla JavaScript (ES6+), Vite, TailwindCSS
+- **Backend**: Node.js, Express.js
+- **Database**: PostgreSQL (Dockerized)
+- **Testing**: Jest, Supertest
 
-The official academic report for this project is available in this repository:
+## 🛠️ Features
 
-> 📘 **Download Group [XX] Project Report ([Your_Report_Name].pdf)**
-> 
-> *Comprehensive submission detailing domain problem analysis, relational database schema normalization, entity relationship diagrams, query optimization, system security policies, and deployment logs.*
+- **Robust Backend Architecture**: Express REST API following strict MVC patterns.
+- **Role-Based Access Control (RBAC)**: JWT authentication with granular permissions across roles (`super_admin`, `doctor`, `clerk`, `lab_staff`, `photographer`).
+- **Normalized Schema (3NF/BCNF)**: Architected from complex ER diagrams to ensure data integrity and remove redundancies.
+- **Adversarial Resiliency**:
+  - Comprehensive protection against SQL Injection via parameterized `pg` queries.
+  - Strict Database constraints (Unique, Foreign Keys, Not Null).
+  - State machine enforcement preventing invalid backward status transitions on cases.
+  - `express-validator` schema validations to gracefully handle malformed data inputs.
+- **Audit Logging**: Asynchronous tracking of user modifications across core tables.
 
-- **UI/UX Prototype**: [Link to Figma/Design File]
-- **Source Repository**: [Link to your GitHub Repository]
+## 📁 Project Structure
 
----
+```
+Forensic-Medicine-Database/
+├── backend/
+│   ├── src/
+│   │   ├── config/       # DB Pool & Environment configs
+│   │   ├── controllers/  # Core business logic handling
+│   │   ├── db/           # Migrations, Seeds, and Scripts
+│   │   ├── middleware/   # Auth, RBAC, Validation, Error Handling
+│   │   ├── routes/       # Express route definitions
+│   │   └── utils/        # Error mapping and async wrappers
+│   ├── tests/            # Jest Suites (Integration, Adversarial)
+│   └── server.js         # Entry point
+├── src/                  # Frontend Vite Source code (Vanilla JS)
+├── index.html            # Main UI Template
+└── package.json
+```
 
-## 📌 Executive Overview
+## ⚙️ Installation & Setup
 
-[Provide a brief 1-2 paragraph description of the problem your project solves and the domain it operates in. Mention the traditional challenges and how your digital platform transforms the workflow.]
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/imaadh-ifthi/Forensic-Medicine-Database.git
+   cd Forensic-Medicine-Database
+   ```
 
-Developed for the **[Course Code] [Course Name]** module at the **[University Name]**, the **[Your Project Name]** transforms this workflow into an enterprise-grade, secure, and efficient digital platform.
+2. **Setup Frontend:**
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-### Core Objectives:
-1. **[Objective 1]**: [Brief description, e.g., Data Integrity & Compliance]
-2. **[Objective 2]**: [Brief description, e.g., Real-time Tracking & Auditing]
-3. **[Objective 3]**: [Brief description, e.g., Role-Based Security]
-4. **[Objective 4]**: [Brief description, e.g., Automated Report Generation]
-5. **[Objective 5]**: [Brief description, e.g., Modern Cloud Native Operations]
+3. **Setup Backend:**
+   ```bash
+   cd backend
+   npm install
+   ```
 
----
+4. **Environment Variables**:
+   Create a `.env` file in the `backend/` directory:
+   ```env
+   NODE_ENV=development
+   PORT=3000
+   DB_USER=postgres
+   DB_PASSWORD=yourpassword
+   DB_HOST=127.0.0.1
+   DB_PORT=5433
+   DB_NAME=fmdbs
+   JWT_SECRET=super_secret_jwt_signature_key_2026
+   JWT_EXPIRES_IN=24h
+   ```
 
-## 🛠️ Technology Stack
+5. **Start PostgreSQL Container (if using Docker)**:
+   ```bash
+   docker-compose up -d
+   ```
 
-The project adopts the modern **[Your Stack, e.g., MERN/PERN]** Stack paired with cloud DevOps tools to deliver speed, reliability, and security:
+6. **Run Database Migrations & Seeds**:
+   Navigate to `backend/` and execute the migration script to build the 3NF schemas and populate realistic test data:
+   ```bash
+   node src/db/migrate.js
+   ```
 
-### 🌟 Core Infrastructure
+7. **Run the API**:
+   ```bash
+   npm run dev
+   ```
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="14%">
-        <strong>[Tech 1, e.g., PostgreSQL]</strong><br />
-        <sub>[e.g., v15+ Relational DB]</sub>
-      </td>
-      <td align="center" width="14%">
-        <strong>[Tech 2, e.g., Express.js]</strong><br />
-        <sub>[e.g., v5.x REST API]</sub>
-      </td>
-      <td align="center" width="14%">
-        <strong>[Tech 3, e.g., React]</strong><br />
-        <sub>[e.g., SPA Frontend]</sub>
-      </td>
-      <td align="center" width="14%">
-        <strong>[Tech 4, e.g., Node.js]</strong><br />
-        <sub>[e.g., v18+ Runtime]</sub>
-      </td>
-      <td align="center" width="14%">
-        <strong>[Tech 5, e.g., Docker]</strong><br />
-        <sub>[e.g., Container Engine]</sub>
-      </td>
-      <td align="center" width="14%">
-        <strong>[Tech 6, e.g., GitHub Actions]</strong><br />
-        <sub>[e.g., CI/CD Pipeline]</sub>
-      </td>
-      <td align="center" width="14%">
-        <strong>[Tech 7, e.g., AWS EC2]</strong><br />
-        <sub>[e.g., Cloud Deployment]</sub>
-      </td>
-    </tr>
-  </table>
-</div>
+## 🧪 Testing
 
-### Architectural Roles:
-- **[Tech 1]**: [Description of how it's used in your project, e.g., Primary relational engine storing users and records.]
-- **[Tech 2]**: [Description of how it's used in your project, e.g., High-throughput REST API with JWT auth guards.]
-- **[Tech 3]**: [Description of how it's used in your project, e.g., Component-driven SPA powered by Vite and Tailwind CSS.]
-- **[Tech 4]**: [Description of how it's used in your project, e.g., Multi-container setup isolating frontend and backend.]
+The backend contains a rigorous, adversarial `Jest` suite covering Auth Bypass attempts, Data Integrity failures, Concurrency/Race condition handling, and complete Integration workflows.
 
----
+To run the test suite:
+```bash
+cd backend
+npm test
+```
 
-## 🏛️ Database Architecture & Relational Design
+## 🧑‍⚕️ Dummy Accounts (Seed Data)
 
-The database schema (`schema.sql`) adheres to **[e.g., 3NF/BCNF]** standards to eliminate anomaly risks while accommodating complex workflows.
+After running the seed script, you can log in using the following test accounts:
+- **Admin**: `admin` / `password123`
+- **Doctor**: `dr_ameen` / `password123`
+- **Clerk**: `clerk1` / `password123`
 
-### Entity-Relationship Diagram (ERD)
+## 📝 License
 
-```mermaid
-erDiagram
-    users ||--o{ entities : "manages"
-    entities {
-        varchar id PK
-        varchar name
-        varchar status
-    }
-    % Replace this with your actual Mermaid ERD generated from your schema
+Internal Project.
