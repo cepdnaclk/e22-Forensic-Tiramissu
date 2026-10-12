@@ -4,18 +4,18 @@ permalink: index.html
 
 # Repository and Project Details
 repository-name: e22-co226-project-template
-title: Project Forensa - Forensic Medical Case Management System
+title: Forensic Medical Records Management System
 ---
 
-# Project Forensa - Forensic Medical Case Management System
+# Project Forensa - Forensic-Medicine-Database
 
 ---
 
 ## Team
-- E/22/001, H.M.H.N. Aberathna, [e22001@eng.pdn.ac.lk](mailto:e22001@eng.pdn.ac.lk)
-- E/22/027, M.A.N.P. Anawarathne, [e22027@eng.pdn.ac.lk](mailto:e22027@eng.pdn.ac.lk)
-- E/22/120, A.S.V. Gunasiri, [e22120@eng.pdn.ac.lk](mailto:e22120@eng.pdn.ac.lk)
-- E/22/324, P.H.D. Rathnasiri, [e22324@eng.pdn.ac.lk](mailto:e22324@eng.pdn.ac.lk)
+- E/22/184, [Bhagya Karunanayake](https://www.linkedin.com/in/bhagya-karunanayake-b52085270?utm_source=share_via&utm_content=profile&utm_medium=member_android)
+- E/22/151, [Imaadh Ifthikar](https://www.linkedin.com/in/imaadh-ifthikar-the-computer-engineer?utm_source=share_via&utm_content=profile&utm_medium=member_android)
+- E/22/320, [Rashad Shamil](https://www.linkedin.com/in/rashadshamil?utm_source=share_via&utm_content=profile&utm_medium=member_android)
+- E/22/193, [S. Kishonithan](https://www.linkedin.com/in/kishonithan-suntharalingam-2444012b7?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 
 ---
 
