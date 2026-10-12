@@ -1,162 +1,127 @@
-___
-FORENSIA - Database System for a Forensic Medical Department 
-___
+<p align="center">
+  <a href="#[your-project-name]">
+    <img src="./assets/logo.png" alt="Team Logo" width="160" height="160" style="border-radius: 50%; box-shadow: 0 4px 20px rgba(0,0,0,0.35);" />
+  </a>
+</p>
 
-## Please refer the instructions in below URL:
+<h1 align="center">[Your Project Name]</h1>
 
-https://projects.ce.pdn.ac.lk/docs/how-to-add-a-project
-# Setup Guide
+<p align="center">
+  <strong>[Course Code] — [Course Name] Module Project</strong><br />
+  [Department Name] | [Faculty Name] | [University Name]
+</p>
 
-## Prerequisites
-
-Before running the project, install:
-
-- Python 3.10 or later
-- MySQL Server
-- MySQL Workbench (optional)
-
----
-
-## 1. Clone the Repository
-
-```bash
-git clone https://github.com/cepdnaclk/project_forensa.git
-cd project_forensa
-```
+<p align="center">
+  <em>Designed and engineered by <strong>[Your Team Name]</strong> (Group [XX])</em>
+</p>
 
 ---
 
-## 2. Create a Virtual Environment
+## 📑 Quick Navigation
 
-```bash
-python -m venv .venv
-```
-
-Activate the virtual environment (Windows):
-
-```bash
-.venv\Scripts\activate
-```
-
----
-
-## 3. Install Required Python Packages
-
-```bash
-pip install -r Code/backend/requirements.txt
-```
-
-If required, install the following packages manually:
-
-```bash
-pip install mysql-connector-python python-dotenv pytest httpx
-```
+- 📄 Project Report & Documentation
+- 📌 Executive Overview
+- 🛠️ Technology Stack
+- ☁️ Cloud Architecture & DevOps Pipeline
+- 🏛️ Database Architecture & Relational Design
+- 👥 Role-Based Access Control (RBAC)
+- 📋 Core Features & Workflows
+- 🚀 Quick Start & Deployment Guide
+- 🧪 Testing & Quality Assurance
+- 🔐 Pre-Seeded Test Accounts
+- 👥 Team Members
 
 ---
 
-## 4. Set Up the Database
+## 📄 Project Report & Documentation
 
-Create a MySQL database:
+The official academic report for this project is available in this repository:
 
-```sql
-CREATE DATABASE ForensicMedicalDB;
-```
+> 📘 **Download Group [XX] Project Report ([Your_Report_Name].pdf)**
+> 
+> *Comprehensive submission detailing domain problem analysis, relational database schema normalization, entity relationship diagrams, query optimization, system security policies, and deployment logs.*
 
-Run the SQL scripts in this order:
-
-Run the SQL scripts in this order:
-```
-1.  database/table_creation.sql	
-2.  database/constraints.sql	
-3.  database/indexes.sql	
-4.	database/views.sql	
-5.	dtabase/stored_procedures.sql	
-6.	database/triggers.sql	
-7.	database/data_insertion.sql
-```
+- **UI/UX Prototype**: [Link to Figma/Design File]
+- **Source Repository**: [Link to your GitHub Repository]
 
 ---
 
-## 5. Configure Environment Variables
+## 📌 Executive Overview
 
-Create a `.env` file inside the `Code/backend` folder.
+[Provide a brief 1-2 paragraph description of the problem your project solves and the domain it operates in. Mention the traditional challenges and how your digital platform transforms the workflow.]
 
-Example:
+Developed for the **[Course Code] [Course Name]** module at the **[University Name]**, the **[Your Project Name]** transforms this workflow into an enterprise-grade, secure, and efficient digital platform.
 
-```env
-DB_HOST=localhost
-DB_NAME=ForensicMedicalDB
-DB_USER=root
-DB_PASSWORD=your_password
-DB_PORT=3306
-```
-
----
-
-## 6. Run the Backend & Frontend
-
-From the project root directory:
-
-```bash
-run_backend.bat
-```
-
-or
-
-```bash
-python backend/app.py
-```
+### Core Objectives:
+1. **[Objective 1]**: [Brief description, e.g., Data Integrity & Compliance]
+2. **[Objective 2]**: [Brief description, e.g., Real-time Tracking & Auditing]
+3. **[Objective 3]**: [Brief description, e.g., Role-Based Security]
+4. **[Objective 4]**: [Brief description, e.g., Automated Report Generation]
+5. **[Objective 5]**: [Brief description, e.g., Modern Cloud Native Operations]
 
 ---
 
-## 7. Run API Tests
+## 🛠️ Technology Stack
 
-Run the complete test suite with `pytest`:
+The project adopts the modern **[Your Stack, e.g., MERN/PERN]** Stack paired with cloud DevOps tools to deliver speed, reliability, and security:
 
-```bash
-pytest Code/backend/tests -v
-```
+### 🌟 Core Infrastructure
 
-or directly using the virtual environment executable:
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="14%">
+        <strong>[Tech 1, e.g., PostgreSQL]</strong><br />
+        <sub>[e.g., v15+ Relational DB]</sub>
+      </td>
+      <td align="center" width="14%">
+        <strong>[Tech 2, e.g., Express.js]</strong><br />
+        <sub>[e.g., v5.x REST API]</sub>
+      </td>
+      <td align="center" width="14%">
+        <strong>[Tech 3, e.g., React]</strong><br />
+        <sub>[e.g., SPA Frontend]</sub>
+      </td>
+      <td align="center" width="14%">
+        <strong>[Tech 4, e.g., Node.js]</strong><br />
+        <sub>[e.g., v18+ Runtime]</sub>
+      </td>
+      <td align="center" width="14%">
+        <strong>[Tech 5, e.g., Docker]</strong><br />
+        <sub>[e.g., Container Engine]</sub>
+      </td>
+      <td align="center" width="14%">
+        <strong>[Tech 6, e.g., GitHub Actions]</strong><br />
+        <sub>[e.g., CI/CD Pipeline]</sub>
+      </td>
+      <td align="center" width="14%">
+        <strong>[Tech 7, e.g., AWS EC2]</strong><br />
+        <sub>[e.g., Cloud Deployment]</sub>
+      </td>
+    </tr>
+  </table>
+</div>
 
-```bash
-.\.venv\Scripts\pytest.exe Code/backend/tests -v
-```
-
-To run a specific test file:
-
-```bash
-pytest Code/backend/tests/test_auth.py -v
-```
+### Architectural Roles:
+- **[Tech 1]**: [Description of how it's used in your project, e.g., Primary relational engine storing users and records.]
+- **[Tech 2]**: [Description of how it's used in your project, e.g., High-throughput REST API with JWT auth guards.]
+- **[Tech 3]**: [Description of how it's used in your project, e.g., Component-driven SPA powered by Vite and Tailwind CSS.]
+- **[Tech 4]**: [Description of how it's used in your project, e.g., Multi-container setup isolating frontend and backend.]
 
 ---
 
-## Technologies Used
+## 🏛️ Database Architecture & Relational Design
 
-- Python
-- FastAPI
-- MySQL
-- MySQL Connector/Python
-- python-dotenv
-- Pytest & HTTPX
+The database schema (`schema.sql`) adheres to **[e.g., 3NF/BCNF]** standards to eliminate anomaly risks while accommodating complex workflows.
 
-## Backend report and security endpoints
+### Entity-Relationship Diagram (ERD)
 
-The backend now includes authenticated endpoints for:
-
-- `GET /api/reports/daily`
-- `GET /api/reports/monthly`
-- `GET /api/reports/pending`
-- `GET /api/reports/court`
-- `GET /api/reports/statistical`
-- `POST /api/admin/database-backup`
-
-New accounts use salted PBKDF2-SHA256 password hashes. Existing plaintext passwords are automatically upgraded after a successful login. Audit log entries are created when reports are viewed and when a backup is generated.
-
-Copy `Code/backend/.env.example` to `Code/backend/.env` and enter the local MySQL credentials before running the backend.
-
-## PDF Report Downloads
-
-The Reports Centre provides authenticated PDF downloads for Daily, Monthly, Pending Cases, Court, and Statistical reports. Install dependencies, restart the backend, log in, and open the **REPORTS** tab.
-
-PATIENT MODULE BUILD: 2026-07-22
+```mermaid
+erDiagram
+    users ||--o{ entities : "manages"
+    entities {
+        varchar id PK
+        varchar name
+        varchar status
+    }
+    % Replace this with your actual Mermaid ERD generated from your schema
