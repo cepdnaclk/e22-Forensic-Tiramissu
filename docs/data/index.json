@@ -1,35 +1,46 @@
 {
-  "title": "Forensa-Fronsic-Database-Management-System",
+  "title": "Forensic-Medicine-Database",
 
   "team": [
     {
-      "name": "H.M.H.N. Aberathna",
-      "email": "e22001@eng.pdn.ac.lk",
-      "eNumber": "E/22/001"
+      "name": "Bhagya Karunanayake",
+      "email": "e22184@eng.pdn.ac.lk",
+      "eNumber": "E/22/184"
     },
     {
-      "name": "M.A.N.P. Anawarathne",
-      "email": "e22027@eng.pdn.ac.lk",
-      "eNumber": "E/22/027"
+      "name": "Imaadh Ifthikar",
+      "email": "e22151@eng.pdn.ac.lk",
+      "eNumber": "E/22/151"
     },
     {
-      "name": "P.H.D. Rathnasiri",
-      "email": "e22324@eng.pdn.ac.lk",
-      "eNumber": "E/22/324"
+      "name": "Rashad Shamil",
+      "email": "e22320@eng.pdn.ac.lk",
+      "eNumber": "E/22/320"
     },
     {
-      "name": "A.S.V. Gunasiri",
-      "email": "e22120@eng.pdn.ac.lk",
-      "eNumber": "E/22/120"
+      "name": "Kishonithan S.",
+      "email": "e22193@eng.pdn.ac.lk",
+      "eNumber": "E/22/193"
     }
   ],
 
   "supervisors": [
     {
-      "name": "To be updated",
-      "email": "To be updated"
+      "name": "Mr. Biswajith Dissanayake",
+      "email": "biswajithd@eng.pdn.ac.lk"
     }
   ],
-
-  "tags": ["Web", "Software Systems", "CO2060"]
+  "tags": [
+        "Forensic Medicine",
+        "Medical Records",
+        "PostgreSQL",
+        "Express.js",
+        "React",
+        "Node.js",
+        "Docker",
+        "Typescript",
+        "Database Systems"
+    ],
+    "image": "cover_page.jpg",
+    "thumbnail": "thumbnail.jpg"
 }
